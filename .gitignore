@@ -1,0 +1,13 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+
+# Antigravity AI context files (Privacy)
+AGENTS.md
+PORTFOLIO_PRD.md
+PROJECT_ANALYSIS.md
+handoff_summary.md

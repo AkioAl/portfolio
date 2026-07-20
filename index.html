@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M Rifky Al Fadhry — Flutter Developer &amp; CS Student</title>
+  <meta name="description" content="Personal portfolio of M Rifky Al Fadhry — Final-year Computer Science student passionate about AI, data, and building useful technology with Flutter and Python.">
+  <meta name="keywords" content="M Rifky Al Fadhry, Flutter Developer, CS Student, Portfolio, Mobile Developer, Python, Universitas Djuanda">
+  <meta name="author" content="M Rifky Al Fadhry">
+  <meta property="og:title" content="M Rifky Al Fadhry — Flutter Developer &amp; CS Student">
+  <meta property="og:description" content="Final-year CS student who builds apps that feel like they understand you.">
+  <meta property="og:type" content="website">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════════════ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="RF Logo">RF</a>
+
+      <ul class="nav-links" id="nav-links" role="navigation" aria-label="Main navigation">
+        <li><a href="#home"       class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about"      class="nav-link"        data-section="about">About</a></li>
+        <li><a href="#projects"   class="nav-link"        data-section="projects">Projects</a></li>
+        <li><a href="#skills"     class="nav-link"        data-section="skills">Skills</a></li>
+        <li><a href="#experience" class="nav-link"        data-section="experience">Experience</a></li>
+        <li><a href="#contact"    class="nav-link"        data-section="contact">Contact</a></li>
+      </ul>
+
+      <a href="assets/CV - M RIFKY ALFADRY.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outlined btn-sm nav-cv" id="nav-download-cv">
+        <i class="fas fa-eye" aria-hidden="true"></i> View CV
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <ul>
+        <li><a href="#home"       class="mobile-link">Home</a></li>
+        <li><a href="#about"      class="mobile-link">About</a></li>
+        <li><a href="#projects"   class="mobile-link">Projects</a></li>
+        <li><a href="#skills"     class="mobile-link">Skills</a></li>
+        <li><a href="#experience" class="mobile-link">Experience</a></li>
+        <li><a href="#contact"    class="mobile-link">Contact</a></li>
+      </ul>
+      <a href="assets/CV - M RIFKY ALFADRY.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outlined btn-sm mobile-cv-btn">
+        <i class="fas fa-eye" aria-hidden="true"></i> View CV
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="home" class="hero">
+    <!-- Animated Star Background -->
+    <div class="hero-stars" id="hero-stars" aria-hidden="true"></div>
+
+    <div class="hero-container">
+
+      <!-- Left: Text Content -->
+      <div class="hero-left fade-in">
+        <span class="hero-greeting">Hello, I'm</span>
+        <h1 class="hero-name">
+          <span class="name-white">M Rifky</span><br>
+          <span class="name-blue">Al Fadhry</span>
+        </h1>
+        <p class="hero-subtitle">
+          Flutter Developer &amp; CS Student <span class="cursor" aria-hidden="true">|</span>
+        </p>
+        <p class="hero-description">
+          Final-year Computer Science student passionate about AI, data, and building
+          useful technology. I craft mobile experiences with Flutter and solve
+          real-world problems with Python.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary" id="hero-view-work">
+            View My Work <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+          <a href="#contact" class="btn btn-outlined" id="hero-lets-connect">
+            Let's Connect <i class="fas fa-circle-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="hero-socials">
+          <span class="find-me">Find me on</span>
+          <a href="https://linkedin.com/in/rifky-al-fadry" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="LinkedIn Profile" id="social-linkedin">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/AkioAl" target="_blank" rel="noopener noreferrer"
+             class="social-link" aria-label="GitHub Profile" id="social-github">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:Rifkyalfadry064@gmail.com"
+             class="social-link" aria-label="Email" id="social-email">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div><!-- /hero-left -->
+
+      <!-- Right: Visual Content -->
+      <div class="hero-right fade-in fade-delay-1">
+
+        <!-- Card Group: Badge + Code Card -->
+        <div class="hero-card-group">
+
+          <!-- Availability Badge -->
+          <div class="availability-badge" aria-label="Available for opportunities">
+            <span class="avail-dot" aria-hidden="true"></span>
+            <div class="avail-text">
+              <small>AVAILABLE FOR</small>
+              <strong>Opportunities</strong>
+            </div>
+          </div>
+
+          <!-- Code Card -->
+          <div class="code-card" aria-label="Developer profile code snippet">
+            <div class="code-card-header">
+              <div class="code-dots" aria-hidden="true">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+              <span class="code-lang-badge">JS</span>
+            </div>
+            <div class="code-body">
+<pre><code><span class="ck">const</span> <span class="cv">developer</span> <span class="co">=</span> {
+  <span class="cp">name</span><span class="co">:</span> <span class="cs">'M Rifky Al Fadhry'</span>,
+  <span class="cp">role</span><span class="co">:</span> <span class="cs">'Flutter Developer'</span>,
+  <span class="cp">passion</span><span class="co">:</span> <span class="cs">'Building apps with soul'</span>,
+  <span class="cp">tools</span><span class="co">:</span> [<span class="cs">'Flutter'</span>, <span class="cs">'Python'</span>, <span class="cs">'Figma'</span>],
+};
+<span class="cv">console</span>.<span class="cf">log</span>(<span class="cs">'Let\'s build something great!'</span>);</code></pre>
+            </div>
+          </div><!-- /code-card -->
+
+        </div><!-- /hero-card-group -->
+
+
+        <div class="hero-photo-wrapper">
+          <div class="photo-glow-ring" aria-hidden="true"></div>
+          <img
+            src="assets/profile2.png"
+            alt="M Rifky Al Fadhry — Flutter Developer and CS Student"
+            class="hero-photo"
+            loading="eager"
+            decoding="async"
+          >
+        </div>
+
+
+
+      </div><!-- /hero-right -->
+    </div><!-- /hero-container -->
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       STATS BAR
+  ═══════════════════════════════════════════════ -->
+  <div class="stats-bar fade-in" role="region" aria-label="Key statistics">
+    <div class="stats-container">
+      <div class="stat-item">
+        <i class="fas fa-calendar-alt stat-icon" aria-hidden="true"></i>
+        <div class="stat-content">
+          <div class="stat-number">
+            <span class="count-num" data-target="2" id="stat-years">0</span><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-label">Years of Building</div>
+        </div>
+      </div>
+
+      <div class="stat-divider" aria-hidden="true"></div>
+
+      <div class="stat-item">
+        <i class="fas fa-laptop-code stat-icon" aria-hidden="true"></i>
+        <div class="stat-content">
+          <div class="stat-number">
+            <span class="count-num" data-target="6" id="stat-apps">0</span>
+          </div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+      </div>
+
+      <div class="stat-divider" aria-hidden="true"></div>
+
+      <div class="stat-item">
+        <i class="fas fa-fire stat-icon" aria-hidden="true"></i>
+        <div class="stat-content">
+          <div class="stat-number">
+            <span class="count-num" data-target="100" id="stat-commit">0</span><span class="stat-suffix">%</span>
+          </div>
+          <div class="stat-label">Commitment</div>
+        </div>
+      </div>
+
+      <div class="stat-divider" aria-hidden="true"></div>
+
+      <div class="stat-item">
+        <i class="fas fa-lightbulb stat-icon" aria-hidden="true"></i>
+        <div class="stat-content">
+          <div class="stat-number">
+            <span class="stat-infinity" aria-label="Infinity">∞</span>
+          </div>
+          <div class="stat-label">Ideas in Queue</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="about" class="about-section">
+    <div class="section-container">
+
+      <!-- Left: Text -->
+      <div class="about-left fade-in">
+        <span class="section-label">ABOUT ME</span>
+        <h2 class="section-heading">
+          Turning ideas into<br>
+          <em class="text-highlight">digital</em> experiences
+        </h2>
+        <p class="about-description">
+          Final-year Computer Science student passionate about AI, data, and
+          building useful technology. Experienced in developing real-world data
+          dashboards during a government internship, leading product teams through
+          end-to-end development cycles, and working with Python for data-driven
+          solutions. Quick to learn, proactive, and adaptable, with strong
+          collaboration and problem-solving skills.
+        </p>
+        <a href="#contact" class="btn btn-outlined" id="about-more-btn">
+          More About Me <i class="fas fa-user" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <!-- Right: Skills + Tech -->
+      <div class="about-right fade-in fade-delay-1" id="skills">
+        <h3 class="skills-section-title">What I Do Best</h3>
+
+        <!-- Progress Bars -->
+        <div class="skills-bars" role="list">
+
+          <div class="skill-bar-item" role="listitem">
+            <div class="skill-bar-header">
+              <span class="skill-name">UI/UX Design</span>
+              <span class="skill-percent">90%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="UI/UX Design skill level">
+              <div class="skill-bar-fill" data-percent="90"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar-item" role="listitem">
+            <div class="skill-bar-header">
+              <span class="skill-name">Mobile Development</span>
+              <span class="skill-percent">85%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Mobile Development skill level">
+              <div class="skill-bar-fill" data-percent="85"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar-item" role="listitem">
+            <div class="skill-bar-header">
+              <span class="skill-name">Data Analysis</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Data Analysis skill level">
+              <div class="skill-bar-fill" data-percent="80"></div>
+            </div>
+          </div>
+
+          <div class="skill-bar-item" role="listitem">
+            <div class="skill-bar-header">
+              <span class="skill-name">Problem Solving</span>
+              <span class="skill-percent">95%</span>
+            </div>
+            <div class="skill-bar-track" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Problem Solving skill level">
+              <div class="skill-bar-fill" data-percent="95"></div>
+            </div>
+          </div>
+
+        </div><!-- /skills-bars -->
+
+        <!-- Tech Stack Grid -->
+        <div class="tech-grid" role="list" aria-label="Technology stack">
+
+          <div class="tech-item" role="listitem">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" alt="Flutter" width="32" height="32" loading="lazy">
+            <span>Flutter</span>
+          </div>
+          <div class="tech-item" role="listitem">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" width="32" height="32" loading="lazy">
+            <span>Python</span>
+          </div>
+          <div class="tech-item" role="listitem">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="Figma" width="32" height="32" loading="lazy">
+            <span>Figma</span>
+          </div>
+          <div class="tech-item" role="listitem">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="SQL" width="32" height="32" loading="lazy">
+            <span>SQL</span>
+          </div>
+          <div class="tech-item" role="listitem">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5" width="32" height="32" loading="lazy">
+            <span>HTML/CSS</span>
+          </div>
+          <div class="tech-item" role="listitem">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git" width="32" height="32" loading="lazy">
+            <span>Git</span>
+          </div>
+          <div class="tech-item" role="listitem">
+            <div class="tech-icon-custom canva-icon" aria-hidden="true">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <span>Canva</span>
+          </div>
+          <div class="tech-item" role="listitem">
+            <div class="tech-icon-custom excel-icon" aria-hidden="true">
+              <i class="fas fa-table"></i>
+            </div>
+            <span>Excel</span>
+          </div>
+
+        </div><!-- /tech-grid -->
+      </div><!-- /about-right -->
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       FEATURED PROJECTS
+  ═══════════════════════════════════════════════ -->
+  <section id="projects" class="projects-section">
+    <div class="section-container">
+
+      <!-- Header -->
+      <div class="projects-header fade-in">
+        <div class="projects-header-left">
+          <span class="section-label">FEATURED PROJECTS</span>
+          <h2 class="section-heading">
+            Selected works that<br>make <em class="text-highlight">impact</em>
+          </h2>
+        </div>
+        <a href="#projects" class="view-all-link" id="view-all-projects">
+          View All Projects <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <!-- Carousel -->
+      <div class="carousel-wrapper fade-in fade-delay-1">
+        <button class="carousel-btn carousel-prev" id="prev-btn" aria-label="Previous project">
+          <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+
+        <div class="carousel-viewport" id="carousel-viewport">
+          <div class="carousel-track" id="carousel-track">
+
+            <!-- ── Card 1: LUMORA ── -->
+            <div class="project-card" id="project-lumora">
+              <div class="project-screenshot">
+                <img src="projects/Home-Lumora.png" alt="LUMORA Website" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=800';">
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">LUMORA</h3>
+                <p class="project-subtitle">Website Landing Page</p>
+                <p class="project-description">
+                  A modern, responsive landing page website built with a focus on visual storytelling and clean UI/UX design.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">UI/UX</span>
+                </div>
+                <button class="project-arrow-btn" aria-label="View LUMORA project details">
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- ── Card 2: KOPITAGRAM ── -->
+            <div class="project-card" id="project-kopitagram">
+              <div class="project-screenshot">
+                <img src="projects/Home-Kopitagram.jpg" alt="Kopitagram App" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=800';">
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">KOPITAGRAM (Concept)</h3>
+                <p class="project-subtitle">Unofficial App Case Study</p>
+                <p class="project-description">
+                  A personal case study to design a mobile application concept for a coffee shop, focusing on a seamless ordering experience and an engaging user interface.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">Flutter</span>
+                  <span class="tag">Dart</span>
+                  <span class="tag">UI/UX</span>
+                  <span class="tag">Figma</span>
+                </div>
+                <button class="project-arrow-btn" aria-label="View Kopitagram project details">
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- ── Card 3: FILKOM ── -->
+            <div class="project-card" id="project-filkom">
+              <div class="project-screenshot">
+                <img src="projects/Home-Filkom.png" alt="FILKOM UNIDA Website Redesign" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800';">
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">FILKOM UNIDA (Concept)</h3>
+                <p class="project-subtitle">Unofficial Redesign Case Study</p>
+                <p class="project-description">
+                  A personal case study to redesign the faculty's main platform into a modern, international-standard website.
+                  Focuses on reducing cognitive load with Mega Menu navigation, removing public admin portals, and establishing a premium Glassmorphism aesthetic.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">Next.js</span>
+                  <span class="tag">React</span>
+                  <span class="tag">Tailwind</span>
+                  <span class="tag">UI/UX</span>
+                  <span class="tag">Figma</span>
+                </div>
+                <button class="project-arrow-btn" aria-label="View FILKOM project details">
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- ── Card 4: VESTA ── -->
+            <div class="project-card" id="project-vesta">
+              <div class="project-screenshot">
+                <img src="projects/vesta-dashboard.jpg" alt="VESTA Personal Finance Tracker — Dashboard view" loading="lazy">
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">VESTA</h3>
+                <p class="project-subtitle">Personal Finance Tracker</p>
+                <p class="project-description">
+                  A finance tracker designed with a philosophy — observe more, speak less.
+                  Features emotional spending map, animated statistics, and a midnight ocean aesthetic.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">Flutter</span>
+                  <span class="tag">Dart</span>
+                  <span class="tag">Hive</span>
+                  <span class="tag">fl_chart</span>
+                  <span class="tag">Provider</span>
+                </div>
+                <button class="project-arrow-btn" aria-label="View VESTA project details">
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- ── Card 5: KelomApp ── -->
+            <div class="project-card" id="project-kelomapp">
+              <div class="project-screenshot">
+                <img src="projects/kelomapp-home.jpg" alt="KelomApp Productivity and Task Manager — Home screen" loading="lazy">
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">KelomApp</h3>
+                <p class="project-subtitle">Productivity &amp; Task Manager</p>
+                <p class="project-description">
+                  A productivity app for managing projects, tasks, and focus sessions.
+                  Built with a premium dark UI and Pomodoro timer integration for deep work.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">Flutter</span>
+                  <span class="tag">Dart</span>
+                  <span class="tag">Riverpod</span>
+                  <span class="tag">Hive</span>
+                </div>
+                <button class="project-arrow-btn" aria-label="View KelomApp project details">
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- ── Card 6: ORBIT ── -->
+            <div class="project-card" id="project-orbit">
+              <div class="project-screenshot">
+                <img src="projects/orbit-home.jpg" alt="ORBIT Cosmic Diary — Home screen" loading="lazy">
+              </div>
+              <div class="project-info">
+                <h3 class="project-title">ORBIT — Cosmic Diary</h3>
+                <p class="project-subtitle">A digital time capsule app</p>
+                <p class="project-description">
+                  Write a letter, seal it in a cosmic time capsule, and unlock it in the future.
+                  Offline-first, fully private — no cloud, no servers.
+                </p>
+                <div class="project-tags">
+                  <span class="tag">Flutter</span>
+                  <span class="tag">Dart</span>
+                  <span class="tag">Hive</span>
+                </div>
+                <button class="project-arrow-btn" aria-label="View ORBIT project details">
+                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+
+          </div><!-- /carousel-track -->
+        </div><!-- /carousel-viewport -->
+
+        <button class="carousel-btn carousel-next" id="next-btn" aria-label="Next project">
+          <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div><!-- /carousel-wrapper -->
+
+      <!-- Dots -->
+      <div class="carousel-dots" role="group" aria-label="Project navigation">
+        <button class="carousel-dot active" data-index="0" aria-label="Go to project 1" aria-current="true"></button>
+        <button class="carousel-dot" data-index="1" aria-label="Go to project 2"></button>
+        <button class="carousel-dot" data-index="2" aria-label="Go to project 3"></button>
+        <button class="carousel-dot" data-index="3" aria-label="Go to project 4"></button>
+        <button class="carousel-dot" data-index="4" aria-label="Go to project 5"></button>
+        <button class="carousel-dot" data-index="5" aria-label="Go to project 6"></button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       EXPERIENCE SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="experience" class="experience-section">
+    <div class="section-container">
+
+      <div class="experience-top fade-in">
+        <div class="experience-heading">
+          <span class="section-label">EXPERIENCE</span>
+          <h2 class="section-heading"><em>My professional journey</em></h2>
+        </div>
+      </div>
+
+      <!-- Timeline: 3 columns -->
+      <div class="experience-timeline fade-in fade-delay-1" role="list">
+
+        <!-- Item 1 -->
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2024</span>
+            <h3 class="timeline-title">Field Work Program (KKL)</h3>
+            <p class="timeline-org">Dinas Pendidikan Kota Bogor</p>
+            <ul class="timeline-bullets">
+              <li>Verified and processed large-scale administrative education data with high accuracy</li>
+              <li>Developed a Streamlit-based dashboard for education data monitoring and visualization</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2024 – 2025</span>
+            <h3 class="timeline-title">Education &amp; Information Division</h3>
+            <p class="timeline-org">DPM Universitas Djuanda</p>
+            <ul class="timeline-bullets">
+              <li>Served as lead visual designer for public communication materials</li>
+              <li>Worked under tight deadlines and coordinated across multiple divisions</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="timeline-item" role="listitem">
+          <div class="timeline-dot" aria-hidden="true"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2023 – 2025</span>
+            <h3 class="timeline-title">Project Leader &amp; Developer</h3>
+            <p class="timeline-org">Digital Product Projects</p>
+            <ul class="timeline-bullets">
+              <li>Led teams to design digital products from scratch using Design Thinking</li>
+              <li>Sharpened tactical problem-solving, user empathy, and team collaboration</li>
+            </ul>
+          </div>
+        </div>
+
+      </div><!-- /experience-timeline -->
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       CONTACT SECTION
+  ═══════════════════════════════════════════════ -->
+  <section id="contact" class="contact-section">
+    <div class="section-container">
+
+      <!-- Left: Info -->
+      <div class="contact-left fade-in">
+        <span class="section-label">LET'S WORK TOGETHER</span>
+        <h2 class="section-heading">Have a project<br>in mind?</h2>
+        <p class="contact-subtext">
+          I'd love to collaborate. Let's create something meaningful together.
+        </p>
+
+        <address class="contact-info" style="font-style: normal;">
+          <a href="mailto:Rifkyalfadry064@gmail.com" class="contact-info-item" id="contact-email">
+            <div class="contact-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+            <span>Rifkyalfadry064@gmail.com</span>
+          </a>
+          <div class="contact-info-item">
+            <div class="contact-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
+            <span>Caringin, Jawa Barat</span>
+          </div>
+          <a href="https://linkedin.com/in/rifky-al-fadry" target="_blank" rel="noopener noreferrer" class="contact-info-item" id="contact-linkedin">
+            <div class="contact-icon" aria-hidden="true"><i class="fab fa-linkedin-in"></i></div>
+            <span>linkedin.com/in/rifky-al-fadry</span>
+          </a>
+        </address>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="contact-right fade-in fade-delay-1">
+        <form
+          class="contact-form"
+          id="contact-form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          novalidate
+        >
+          <input type="hidden" name="access_key" value="8a152c09-56a6-463c-b4c4-c134c9cdfe94">
+          <input type="hidden" name="subject" value="New Message from Portfolio - Rifky">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Name</label>
+              <input
+                type="text"
+                id="form-name"
+                name="name"
+                placeholder="e.g. John Doe"
+                autocomplete="name"
+                required
+                aria-label="Your name"
+              >
+            </div>
+            <div class="form-group">
+              <label for="form-email" class="form-label">Email</label>
+              <input
+                type="email"
+                id="form-email"
+                name="email"
+                placeholder="e.g. john@example.com"
+                autocomplete="email"
+                required
+                aria-label="Your email address"
+              >
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="form-message" class="form-label">Message</label>
+            <textarea
+              id="form-message"
+              name="message"
+              placeholder="How can I help you?"
+              rows="6"
+              required
+              aria-label="Your message"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="form-submit-btn">
+            Send Message <i class="fas fa-paper-plane" aria-hidden="true"></i>
+          </button>
+          <div class="form-feedback" id="form-feedback" role="alert" aria-live="polite"></div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-left">
+        <a href="#home" class="footer-logo" aria-label="Back to top — RF Logo">RF</a>
+        <p class="footer-copy">&copy; 2026 M Rifky Al Fadhry. All rights reserved.</p>
+      </div>
+      <div class="footer-center">
+        <p>Crafted with soul <span class="heart" aria-label="heart">♥</span></p>
+      </div>
+      <div class="footer-right">
+        <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top">
+          Back to top <i class="fas fa-arrow-up" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════
+       PROJECT MODAL / LIGHTBOX
+  ═══════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-label="Project details" aria-hidden="true">
+    <div class="modal-card" id="modal-card">
+
+      <!-- Close button -->
+      <button class="modal-close" id="modal-close" aria-label="Close project details">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+
+      <!-- Image area (populated by JS) -->
+      <div class="modal-image-area" id="modal-image-area">
+        <!-- img or coming-soon div injected here -->
+        <button class="modal-arrow modal-arrow-prev hidden" id="modal-prev" aria-label="Previous screenshot">
+          <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <button class="modal-arrow modal-arrow-next hidden" id="modal-next" aria-label="Next screenshot">
+          <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+        <div class="modal-image-counter" id="modal-counter" aria-live="polite" style="display:none;"></div>
+      </div>
+
+      <!-- Info area (populated by JS) -->
+      <div class="modal-info">
+        <h2 class="modal-title" id="modal-title"></h2>
+        <p class="modal-subtitle" id="modal-subtitle"></p>
+        <p class="modal-description" id="modal-description"></p>
+        <div class="modal-tags" id="modal-tags"></div>
+        <div class="modal-actions" id="modal-actions" style="margin-top: 2rem;"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
