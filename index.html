@@ -365,174 +365,150 @@
         </a>
       </div>
 
-      <!-- Carousel -->
-      <div class="carousel-wrapper fade-in fade-delay-1">
-        <button class="carousel-btn carousel-prev" id="prev-btn" aria-label="Previous project">
-          <i class="fas fa-chevron-left" aria-hidden="true"></i>
-        </button>
-
-        <div class="carousel-viewport" id="carousel-viewport">
-          <div class="carousel-track" id="carousel-track">
-
-            <!-- ── Card 1: LUMORA ── -->
-            <div class="project-card" id="project-lumora">
-              <div class="project-screenshot">
-                <img src="projects/Home-Lumora.png" alt="LUMORA Website" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=800';">
-              </div>
-              <div class="project-info">
-                <h3 class="project-title">LUMORA</h3>
-                <p class="project-subtitle">Website Landing Page</p>
-                <p class="project-description">
-                  A modern, responsive landing page website built with a focus on visual storytelling and clean UI/UX design.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">HTML</span>
-                  <span class="tag">CSS</span>
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">UI/UX</span>
-                </div>
-                <button class="project-arrow-btn" aria-label="View LUMORA project details">
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                </button>
+      <!-- Bento Grid -->
+      <div class="bento-grid fade-in fade-delay-1" role="list" aria-label="Project showcase">
+        
+        <!-- Card 1: Lumora — Large (2 cols) -->
+        <article class="bento-card project-card bento-lg" id="project-lumora" role="listitem" aria-label="Lumora project">
+          <div class="card-bg" aria-hidden="true">
+            <img src="projects/Home-Lumora.png" alt="" loading="lazy" />
+          </div>
+          <div class="card-overlay" aria-hidden="true"></div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-category">Landing Page</span>
+              <div class="card-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
               </div>
             </div>
+            <h3 class="card-title">LUMORA</h3>
+            <p class="card-desc">A modern, responsive landing page website built with a focus on visual storytelling and clean UI/UX design.</p>
+            <div class="card-link" aria-label="View Lumora project details">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </article>
 
-            <!-- ── Card 2: KOPITAGRAM ── -->
-            <div class="project-card" id="project-kopitagram">
-              <div class="project-screenshot">
-                <img src="projects/Home-Kopitagram.jpg" alt="Kopitagram App" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=800';">
-              </div>
-              <div class="project-info">
-                <h3 class="project-title">KOPITAGRAM (Concept)</h3>
-                <p class="project-subtitle">Unofficial App Case Study</p>
-                <p class="project-description">
-                  A personal case study to design a mobile application concept for a coffee shop, focusing on a seamless ordering experience and an engaging user interface.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">Flutter</span>
-                  <span class="tag">Dart</span>
-                  <span class="tag">UI/UX</span>
-                  <span class="tag">Figma</span>
-                </div>
-                <button class="project-arrow-btn" aria-label="View Kopitagram project details">
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                </button>
+        <!-- Card 2: VESTA — Medium -->
+        <article class="bento-card project-card bento-md" id="project-vesta" role="listitem" aria-label="VESTA project">
+          <div class="card-bg" aria-hidden="true">
+            <img src="projects/vesta-dashboard.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="card-overlay" aria-hidden="true"></div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-badge badge-deployed">Deployed</span>
+              <div class="card-tags">
+                <span class="tag">Flutter</span>
+                <span class="tag">Dart</span>
+                <span class="tag">Hive</span>
               </div>
             </div>
+            <h3 class="card-title">VESTA</h3>
+            <p class="card-desc">Personal finance tracker with emotional spending map & midnight ocean aesthetic.</p>
+            <div class="card-link" aria-label="View VESTA project details">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </article>
 
-            <!-- ── Card 3: FILKOM ── -->
-            <div class="project-card" id="project-filkom">
-              <div class="project-screenshot">
-                <img src="projects/Home-Filkom.png" alt="FILKOM UNIDA Website Redesign" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800';">
-              </div>
-              <div class="project-info">
-                <h3 class="project-title">FILKOM UNIDA (Concept)</h3>
-                <p class="project-subtitle">Unofficial Redesign Case Study</p>
-                <p class="project-description">
-                  A personal case study to redesign the faculty's main platform into a modern, international-standard website.
-                  Focuses on reducing cognitive load with Mega Menu navigation, removing public admin portals, and establishing a premium Glassmorphism aesthetic.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">Next.js</span>
-                  <span class="tag">React</span>
-                  <span class="tag">Tailwind</span>
-                  <span class="tag">UI/UX</span>
-                  <span class="tag">Figma</span>
-                </div>
-                <button class="project-arrow-btn" aria-label="View FILKOM project details">
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                </button>
+        <!-- Card 3: KelomApp — Medium -->
+        <article class="bento-card project-card bento-md" id="project-kelomapp" role="listitem" aria-label="KelomApp project">
+          <div class="card-bg" aria-hidden="true">
+            <img src="projects/kelomapp-home.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="card-overlay" aria-hidden="true"></div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-badge badge-deployed">Deployed</span>
+              <div class="card-tags">
+                <span class="tag">Flutter</span>
+                <span class="tag">Riverpod</span>
               </div>
             </div>
+            <h3 class="card-title">KelomApp</h3>
+            <p class="card-desc">Productivity & task manager with Pomodoro integration and premium dark UI.</p>
+            <div class="card-link" aria-label="View KelomApp project details">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </article>
 
-            <!-- ── Card 4: VESTA ── -->
-            <div class="project-card" id="project-vesta">
-              <div class="project-screenshot">
-                <img src="projects/vesta-dashboard.jpg" alt="VESTA Personal Finance Tracker — Dashboard view" loading="lazy">
-              </div>
-              <div class="project-info">
-                <h3 class="project-title">VESTA</h3>
-                <p class="project-subtitle">Personal Finance Tracker</p>
-                <p class="project-description">
-                  A finance tracker designed with a philosophy — observe more, speak less.
-                  Features emotional spending map, animated statistics, and a midnight ocean aesthetic.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">Flutter</span>
-                  <span class="tag">Dart</span>
-                  <span class="tag">Hive</span>
-                  <span class="tag">fl_chart</span>
-                  <span class="tag">Provider</span>
-                </div>
-                <button class="project-arrow-btn" aria-label="View VESTA project details">
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                </button>
+        <!-- Card 4: ORBIT — Small -->
+        <article class="bento-card project-card bento-sm" id="project-orbit" role="listitem" aria-label="ORBIT project">
+          <div class="card-bg" aria-hidden="true">
+            <img src="projects/orbit-home.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="card-overlay" aria-hidden="true"></div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-badge badge-deployed">Deployed</span>
+              <div class="card-tags">
+                <span class="tag">Flutter</span>
+                <span class="tag">Hive</span>
               </div>
             </div>
+            <h3 class="card-title">ORBIT</h3>
+            <p class="card-desc">A digital time capsule app. Offline-first, fully private.</p>
+            <div class="card-link" aria-label="View ORBIT project details">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </article>
 
-            <!-- ── Card 5: KelomApp ── -->
-            <div class="project-card" id="project-kelomapp">
-              <div class="project-screenshot">
-                <img src="projects/kelomapp-home.jpg" alt="KelomApp Productivity and Task Manager — Home screen" loading="lazy">
-              </div>
-              <div class="project-info">
-                <h3 class="project-title">KelomApp</h3>
-                <p class="project-subtitle">Productivity &amp; Task Manager</p>
-                <p class="project-description">
-                  A productivity app for managing projects, tasks, and focus sessions.
-                  Built with a premium dark UI and Pomodoro timer integration for deep work.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">Flutter</span>
-                  <span class="tag">Dart</span>
-                  <span class="tag">Riverpod</span>
-                  <span class="tag">Hive</span>
-                </div>
-                <button class="project-arrow-btn" aria-label="View KelomApp project details">
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                </button>
+        <!-- Card 5: KOPITAGRAM — Small -->
+        <article class="bento-card project-card bento-sm" id="project-kopitagram" role="listitem" aria-label="KOPITAGRAM project">
+          <div class="card-bg" aria-hidden="true">
+            <img src="projects/Home-Kopitagram.jpg" alt="" loading="lazy" />
+          </div>
+          <div class="card-overlay" aria-hidden="true"></div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-badge badge-concept">Concept</span>
+              <div class="card-tags">
+                <span class="tag">Flutter</span>
+                <span class="tag">Dart</span>
               </div>
             </div>
+            <h3 class="card-title">KOPITAGRAM</h3>
+            <p class="card-desc">Unofficial App Case Study for a seamless coffee ordering experience.</p>
+            <div class="card-link" aria-label="View Kopitagram project details">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </article>
 
-            <!-- ── Card 6: ORBIT ── -->
-            <div class="project-card" id="project-orbit">
-              <div class="project-screenshot">
-                <img src="projects/orbit-home.jpg" alt="ORBIT Cosmic Diary — Home screen" loading="lazy">
-              </div>
-              <div class="project-info">
-                <h3 class="project-title">ORBIT — Cosmic Diary</h3>
-                <p class="project-subtitle">A digital time capsule app</p>
-                <p class="project-description">
-                  Write a letter, seal it in a cosmic time capsule, and unlock it in the future.
-                  Offline-first, fully private — no cloud, no servers.
-                </p>
-                <div class="project-tags">
-                  <span class="tag">Flutter</span>
-                  <span class="tag">Dart</span>
-                  <span class="tag">Hive</span>
-                </div>
-                <button class="project-arrow-btn" aria-label="View ORBIT project details">
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                </button>
+        <!-- Card 6: FILKOM UNIDA — Large (2 cols) -->
+        <article class="bento-card project-card bento-wide" id="project-filkom" role="listitem" aria-label="FILKOM UNIDA project">
+          <div class="card-bg" aria-hidden="true">
+            <img src="projects/Home-Filkom.png" alt="" loading="lazy" />
+          </div>
+          <div class="card-overlay" aria-hidden="true"></div>
+          <div class="card-content">
+            <div class="card-meta">
+              <span class="card-badge badge-concept">Concept</span>
+              <div class="card-tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">Tailwind</span>
+                <span class="tag">UI/UX</span>
               </div>
             </div>
+            <h3 class="card-title">FILKOM UNIDA</h3>
+            <p class="card-desc">Unofficial Redesign Case Study focusing on a modern, international-standard website.</p>
+            <div class="card-link" aria-label="View FILKOM project details">
+              <span>View Details</span>
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </article>
 
-          </div><!-- /carousel-track -->
-        </div><!-- /carousel-viewport -->
-
-        <button class="carousel-btn carousel-next" id="next-btn" aria-label="Next project">
-          <i class="fas fa-chevron-right" aria-hidden="true"></i>
-        </button>
-      </div><!-- /carousel-wrapper -->
-
-      <!-- Dots -->
-      <div class="carousel-dots" role="group" aria-label="Project navigation">
-        <button class="carousel-dot active" data-index="0" aria-label="Go to project 1" aria-current="true"></button>
-        <button class="carousel-dot" data-index="1" aria-label="Go to project 2"></button>
-        <button class="carousel-dot" data-index="2" aria-label="Go to project 3"></button>
-        <button class="carousel-dot" data-index="3" aria-label="Go to project 4"></button>
-        <button class="carousel-dot" data-index="4" aria-label="Go to project 5"></button>
-        <button class="carousel-dot" data-index="5" aria-label="Go to project 6"></button>
       </div>
 
     </div>

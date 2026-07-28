@@ -213,118 +213,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* ──────────────────────────────────────────────────────────
-     9. PROJECT CAROUSEL
-     ────────────────────────────────────────────────────────── */
-  const viewport    = document.getElementById('carousel-viewport');
-  const track       = document.getElementById('carousel-track');
-  const prevBtn     = document.getElementById('prev-btn');
-  const nextBtn     = document.getElementById('next-btn');
-  const dots        = document.querySelectorAll('.carousel-dot');
-
-  if (track && viewport && prevBtn && nextBtn) {
-    const GAP      = 20;  // px — matches CSS gap
-    let currentIdx = 0;
-    let perView    = 3;
-    let cardWidth  = 0;
-
-    const cards = Array.from(track.querySelectorAll('.project-card'));
-    const total = cards.length;
-
-    const getPerView = () => {
-      if (window.innerWidth <= 768)  return 1;
-      if (window.innerWidth <= 1024) return 2;
-      return 3;
-    };
-
-    const updateButtons = () => {
-      const maxIdx = Math.max(0, total - perView);
-      // Use opacity + pointer-events instead of disabled so clicks always register
-      prevBtn.style.opacity        = currentIdx === 0        ? '0.4' : '1';
-      prevBtn.style.pointerEvents  = currentIdx === 0        ? 'none' : 'all';
-      nextBtn.style.opacity        = currentIdx >= maxIdx    ? '0.4' : '1';
-      nextBtn.style.pointerEvents  = currentIdx >= maxIdx    ? 'none' : 'all';
-    };
-
-    const updateCarousel = (animated = true) => {
-      const maxIdx = Math.max(0, total - perView);
-      currentIdx   = Math.max(0, Math.min(currentIdx, maxIdx));
-
-      const offset = currentIdx * (cardWidth + GAP);
-      track.style.transition = animated
-        ? 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
-        : 'none';
-      track.style.transform = `translateX(-${offset}px)`;
-
-      dots.forEach((dot, i) => {
-        const active = i === currentIdx;
-        dot.classList.toggle('active', active);
-        dot.setAttribute('aria-current', active ? 'true' : 'false');
-      });
-
-      updateButtons();
-    };
-
-    const initSizes = () => {
-      perView   = getPerView();
-      cardWidth = (viewport.offsetWidth - (perView - 1) * GAP) / perView;
-      cards.forEach(card => {
-        card.style.width    = `${cardWidth}px`;
-        card.style.minWidth = `${cardWidth}px`;
-      });
-      const maxIdx = Math.max(0, total - perView);
-      if (currentIdx > maxIdx) currentIdx = maxIdx;
-      updateCarousel(false);
-    };
-
-    // Arrow click handlers — use mousedown for immediate response
-    prevBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      if (currentIdx > 0) {
-        currentIdx--;
-        updateCarousel();
-      }
-    });
-
-    nextBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const maxIdx = Math.max(0, total - perView);
-      if (currentIdx < maxIdx) {
-        currentIdx++;
-        updateCarousel();
-      }
-    });
-
-    dots.forEach((dot, i) => {
-      dot.addEventListener('click', () => {
-        currentIdx = i;
-        updateCarousel();
-      });
-    });
-
-    // Touch/swipe
-    let touchStartX = 0;
-    viewport.addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
-    viewport.addEventListener('touchend', (e) => {
-      const diff = touchStartX - e.changedTouches[0].screenX;
-      if (Math.abs(diff) > 40) {
-        if (diff > 0) nextBtn.click();
-        else prevBtn.click();
-      }
-    }, { passive: true });
-
-    // Init + resize
-    initSizes();
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(initSizes, 120);
-    });
-  }
-
-
-  /* ──────────────────────────────────────────────────────────
      10. SMOOTH SCROLL for anchor links
      ────────────────────────────────────────────────────────── */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -440,17 +328,30 @@ document.addEventListener('DOMContentLoaded', () => {
   // Counter triggers separately via counterObserver.
 
 
-  /* ──────────────────────────────────────────────────────────
-     14. CARD HOVER — subtle glow ripple on project cards
-     ────────────────────────────────────────────────────────── */
-  document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
-      card.style.setProperty('--my', `${e.clientY - rect.top}px`);
-    });
+  /* ────────────────────────────────────────────────────────────
+   14. CARD HOVER - tilt and spotlight effect
+   ──────────────────────────────────────────────────────────── */
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    card.style.setProperty('--mx', `${x}px`);
+    card.style.setProperty('--my', `${y}px`);
+    
+    if (window.innerWidth > 768) {
+      const tiltX = (y / rect.height - 0.5) * 5;
+      const tiltY = -(x / rect.width - 0.5) * 5;
+      card.style.transform = `translateY(-4px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.01)`;
+      card.style.transition = 'transform 0.08s ease';
+    }
   });
 
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'translateY(0) rotateX(0) rotateY(0) scale(1)';
+    card.style.transition = 'transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease';
+  });
+});
 
   /* ──────────────────────────────────────────────────────────
      15. PROJECT MODAL / LIGHTBOX
