@@ -139,7 +139,7 @@ button { font-family: var(--font-sans); }
 .btn-primary:hover {
   background: var(--accent-light);
   box-shadow: 0 0 28px rgba(74,158,255,0.45);
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.03);
 }
 
 .btn-outlined {
@@ -150,7 +150,7 @@ button { font-family: var(--font-sans); }
 .btn-outlined:hover {
   background: var(--accent-dim);
   box-shadow: 0 0 22px var(--accent-glow);
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.02);
 }
 
 .btn-sm   { padding: 9px 18px; font-size: 13px; }
@@ -415,9 +415,9 @@ button { font-family: var(--font-sans); }
 }
 
 .hero-description {
-  font-size: 15.5px;
-  color: var(--text-secondary);
-  line-height: 1.8;
+  font-size: 16px;
+  color: #A1A9BD;
+  line-height: 1.75;
   margin-bottom: 36px;
   max-width: 480px;
 }
@@ -496,7 +496,7 @@ button { font-family: var(--font-sans); }
   border-radius: 14px;
   padding: 10px 16px;
   box-shadow: 0 12px 32px rgba(0,0,0,0.5), 0 0 16px rgba(74,158,255,0.1);
-  animation: badge-float 3.2s ease-in-out infinite;
+  animation: badge-float 4s ease-in-out infinite alternate-reverse;
 }
 @keyframes badge-float {
   0%, 100% { transform: translateY(0); }
@@ -540,19 +540,18 @@ button { font-family: var(--font-sans); }
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: linear-gradient(to bottom, rgba(74,158,255,0.06) 0%, rgba(6,11,24,0) 80%);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-left: 1px solid rgba(255,255,255,0.03);
+  border-right: 1px solid rgba(255,255,255,0.03);
+  overflow: hidden;
 }
 
-.hero-photo-wrapper::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 35%;
-  background: linear-gradient(to bottom, transparent 0%, #060B18 100%);
-  z-index: 3;
-  pointer-events: none;
-}
+/* removed hero-photo-wrapper::after to let the arch container handle the bounds */
 
 .photo-glow-ring {
   position: absolute;
@@ -589,13 +588,19 @@ button { font-family: var(--font-sans); }
 /* Code card — now in-flow inside .hero-card-group */
 .code-card {
   width: 340px;
-  background: rgba(10, 15, 35, 0.72); /* Glassmorphism base */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(74,158,255,0.28);
-  border-radius: 14px;
+  background: rgba(13, 17, 23, 0.65); /* Glassmorphism base */
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(74,158,255,0.2);
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 32px 64px rgba(0,0,0,0.65), 0 0 24px rgba(74,158,255,0.15);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.6), 0 0 20px rgba(74,158,255,0.08);
+  animation: code-float 4.5s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes code-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
 }
 
 .code-card-header {
