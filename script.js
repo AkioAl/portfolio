@@ -584,4 +584,29 @@ document.querySelectorAll('.project-card').forEach(card => {
     if (e.key === 'ArrowRight')  goModalImage(+1);
   });
 
+  /* ──────────────────────────────────────────────────────────
+     15. SKILLS BENTO GRID — MOBILE TOUCH INTERACTION
+     ────────────────────────────────────────────────────────── */
+  const skillCards = document.querySelectorAll('.skill-proof-card');
+  skillCards.forEach(card => {
+    // Prevent sticky hover on iOS by manually toggling .active class
+    card.addEventListener('click', (e) => {
+      // If the user taps the card, toggle 'active' and remove 'active' from others
+      const isActive = card.classList.contains('active');
+      
+      skillCards.forEach(c => c.classList.remove('active'));
+      
+      if (!isActive) {
+        card.classList.add('active');
+      }
+    });
+  });
+
+  // Tap outside to close all active skill cards
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.skill-proof-card')) {
+      skillCards.forEach(c => c.classList.remove('active'));
+    }
+  });
+
 }); // end DOMContentLoaded
