@@ -376,7 +376,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     'project-vesta': {
       title:       'VESTA',
       subtitle:    'Personal Finance Tracker',
-      description: 'A personal finance tracker designed with a philosophy — observe more, speak less. Features emotional spending map, animated statistics, and a midnight ocean aesthetic.',
+      description: 'A personal finance tracker designed with a philosophy, observe more, speak less. Features emotional spending map, animated statistics, and a midnight ocean aesthetic.',
       tags:        ['Flutter', 'Dart', 'Hive', 'fl_chart', 'Provider'],
       images:      [
         'projects/vesta-dashboard.jpg',
@@ -397,7 +397,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     'project-orbit': {
       title:       'ORBIT — Cosmic Diary',
       subtitle:    'A digital time capsule app. Send your memories to the future.',
-      description: 'ORBIT is a cosmic-themed digital diary built with Flutter, letting users write messages, seal them inside a virtual time capsule, and open them again in the future. Built offline-first — everything stays on-device, no server, no cost. Features include Time Capsule Lock, Burn After Reading, a Cosmic Galaxy View, mood tracking, and local notifications.',
+      description: 'ORBIT is a cosmic-themed digital diary built with Flutter, letting users write messages, seal them inside a virtual time capsule, and open them again in the future. Built offline-first, everything stays on-device, no server, no cost. Features include Time Capsule Lock, Burn After Reading, a Cosmic Galaxy View, mood tracking, and local notifications.',
       tags:        ['Flutter', 'Dart', 'Hive', 'Provider', 'Local Notifications', 'Custom Painters', 'Cosmic UI'],
       images:      [
         'projects/orbit-home.jpg',
@@ -408,7 +408,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     'project-lumora': {
       title:       'LUMORA',
       subtitle:    'Website Landing Page',
-      description: 'A self-initiated practice project to design and build a coffee shop landing page from scratch — exploring how visual storytelling, motion, and layout hierarchy can turn a simple page into an inviting brand experience.',
+      description: 'A self-initiated practice project to design and build a coffee shop landing page from scratch, exploring how visual storytelling, motion, and layout hierarchy can turn a simple page into an inviting brand experience.',
       tags:        ['HTML', 'CSS', 'JavaScript', 'UI/UX'],
       link:        'https://lumora-coffee-kappa.vercel.app/',
       images:      [
@@ -493,7 +493,7 @@ document.querySelectorAll('.project-card').forEach(card => {
         <span class="orbit-badge">Coming Soon</span>
         <p class="orbit-title">ORBIT</p>
         <p class="orbit-tagline">Memory Time Capsule</p>
-        <p class="orbit-dev-note">Currently in development — letters locked until a chosen date, delivered through a cinematic galaxy experience.</p>
+        <p class="orbit-dev-note">Currently in development, letters locked until a chosen date, delivered through a cinematic galaxy experience.</p>
       `;
       modalImageArea.insertBefore(cs, modalPrev);
       modalPrev.classList.add('hidden');
