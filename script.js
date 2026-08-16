@@ -397,7 +397,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     'project-orbit': {
       title:       'ORBIT — Cosmic Diary',
       subtitle:    'A digital time capsule app. Send your memories to the future.',
-      description: 'ORBIT adalah aplikasi buku harian kosmik berbasis Flutter yang memungkinkan pengguna menulis pesan, menyegel dalam kapsul waktu virtual, dan membukanya di masa depan. Dibangun dengan pendekatan offline-first — semua data tersimpan lokal di perangkat, tanpa server, tanpa biaya. Fitur: Time Capsule Lock, Burn After Reading, Cosmic Galaxy View, Mood Tracking, dan Local Notifications.',
+      description: 'ORBIT is a cosmic-themed digital diary built with Flutter, letting users write messages, seal them inside a virtual time capsule, and open them again in the future. Built offline-first — everything stays on-device, no server, no cost. Features include Time Capsule Lock, Burn After Reading, a Cosmic Galaxy View, mood tracking, and local notifications.',
       tags:        ['Flutter', 'Dart', 'Hive', 'Provider', 'Local Notifications', 'Custom Painters', 'Cosmic UI'],
       images:      [
         'projects/orbit-home.jpg',
@@ -408,7 +408,7 @@ document.querySelectorAll('.project-card').forEach(card => {
     'project-lumora': {
       title:       'LUMORA',
       subtitle:    'Website Landing Page',
-      description: 'A modern, responsive landing page website built with a focus on visual storytelling and clean UI/UX design.',
+      description: 'A self-initiated practice project to design and build a coffee shop landing page from scratch — exploring how visual storytelling, motion, and layout hierarchy can turn a simple page into an inviting brand experience.',
       tags:        ['HTML', 'CSS', 'JavaScript', 'UI/UX'],
       link:        'https://lumora-coffee-kappa.vercel.app/',
       images:      [
