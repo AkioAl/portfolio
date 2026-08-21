@@ -36,7 +36,7 @@
         <li><a href="#contact"    class="nav-link"        data-section="contact">Contact</a></li>
       </ul>
 
-      <a href="assets/CV - M RIFKY ALFADHRY.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outlined btn-sm nav-cv" id="nav-download-cv">
+      <a href="assets/CV - M Rifky Al Fadhry.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outlined btn-sm nav-cv" id="nav-download-cv">
         <i class="fas fa-eye" aria-hidden="true"></i> View CV
       </a>
 
@@ -57,7 +57,7 @@
         <li><a href="#experience" class="mobile-link">Experience</a></li>
         <li><a href="#contact"    class="mobile-link">Contact</a></li>
       </ul>
-      <a href="assets/CV - M RIFKY ALFADHRY.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outlined btn-sm mobile-cv-btn">
+      <a href="assets/CV - M Rifky Al Fadhry.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outlined btn-sm mobile-cv-btn">
         <i class="fas fa-eye" aria-hidden="true"></i> View CV
       </a>
     </div>
@@ -68,8 +68,12 @@
        HERO SECTION
   ═══════════════════════════════════════════════ -->
   <section id="home" class="hero">
-    <!-- Animated Star Background -->
-    <div class="hero-stars" id="hero-stars" aria-hidden="true"></div>
+    <!-- Glow Shapes — gold / lime / teal ambient -->
+    <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow-3" aria-hidden="true"></div>
+    <!-- Grain texture — replaces scattered stars -->
+    <div class="hero-grain" aria-hidden="true"></div>
 
     <div class="hero-container">
 
@@ -111,59 +115,29 @@
         </div>
       </div><!-- /hero-left -->
 
-      <!-- Right: Visual Content -->
+      <!-- Right: Photo -->
       <div class="hero-right fade-in fade-delay-1">
-
-        <!-- Card Group: Badge + Code Card -->
-        <div class="hero-card-group">
-
-          <!-- Availability Badge -->
-          <div class="availability-badge" aria-label="Available for opportunities">
-            <span class="avail-dot" aria-hidden="true"></span>
-            <div class="avail-text">
-              <small>AVAILABLE FOR</small>
+        <div class="hero-photo-container">
+          <div class="hero-photo-frame">
+            <img
+              src="assets/profile2.png"
+              alt="M Rifky Al Fadhry — Flutter Developer and Software Engineer"
+              class="hero-photo"
+              loading="eager"
+              decoding="async"
+            >
+          </div>
+          <!-- Floating badge overlapping the left edge -->
+          <div class="status-badge" aria-label="Available for opportunities">
+            <div class="status-dot" aria-hidden="true"></div>
+            <div class="status-text">
+              Available for<br>
               <strong>Opportunities</strong>
             </div>
           </div>
-
-          <!-- Code Card -->
-          <div class="code-card" aria-label="Developer profile code snippet">
-            <div class="code-card-header">
-              <div class="code-dots" aria-hidden="true">
-                <span class="dot-red"></span>
-                <span class="dot-yellow"></span>
-                <span class="dot-green"></span>
-              </div>
-              <span class="code-lang-badge">JS</span>
-            </div>
-            <div class="code-body">
-<pre><code><span class="ck">const</span> <span class="cv">developer</span> <span class="co">=</span> {
-  <span class="cp">name</span><span class="co">:</span> <span class="cs">'M Rifky Al Fadhry'</span>,
-  <span class="cp">role</span><span class="co">:</span> <span class="cs">'Software Engineer'</span>,
-  <span class="cp">focus</span><span class="co">:</span> <span class="cs">'Turning ideas into shipped products'</span>,
-  <span class="cp">tools</span><span class="co">:</span> [<span class="cs">'Flutter'</span>, <span class="cs">'Python'</span>, <span class="cs">'Figma'</span>],
-};
-<span class="cv">console</span>.<span class="cf">log</span>(<span class="cs">'Let\'s build something great!'</span>);</code></pre>
-            </div>
-          </div><!-- /code-card -->
-
-        </div><!-- /hero-card-group -->
-
-
-        <div class="hero-photo-wrapper">
-          <div class="photo-glow-ring" aria-hidden="true"></div>
-          <img
-            src="assets/profile2.png"
-            alt="M Rifky Al Fadhry — Flutter Developer and Software Engineer"
-            class="hero-photo"
-            loading="eager"
-            decoding="async"
-          >
         </div>
-
-
-
       </div><!-- /hero-right -->
+
     </div><!-- /hero-container -->
   </section>
 
@@ -226,6 +200,9 @@
        ABOUT SECTION
   ═══════════════════════════════════════════════ -->
   <section id="about" class="about-section">
+    <!-- Ambient Glow -->
+    <div class="ambient-glow glow-about" aria-hidden="true"></div>
+
     <div class="section-container">
 
       <!-- Left: Text -->
@@ -348,9 +325,12 @@
 
 
   <!-- ═══════════════════════════════════════════════
-       FEATURED PROJECTS
+       PROJECTS SECTION
   ═══════════════════════════════════════════════ -->
   <section id="projects" class="projects-section">
+    <!-- Ambient Glow -->
+    <div class="ambient-glow glow-projects" aria-hidden="true"></div>
+
     <div class="section-container">
 
       <!-- Header -->
@@ -583,6 +563,9 @@
        CONTACT SECTION
   ═══════════════════════════════════════════════ -->
   <section id="contact" class="contact-section">
+    <!-- Ambient Glow -->
+    <div class="ambient-glow glow-contact" aria-hidden="true"></div>
+
     <div class="section-container">
 
       <!-- Left: Info -->
@@ -678,7 +661,7 @@
         <p class="footer-copy">&copy; 2026 M Rifky Al Fadhry. All rights reserved.</p>
       </div>
       <div class="footer-center">
-        <p>Crafted with soul <span class="heart" aria-label="heart">♥</span></p>
+        <p>Engineered with precision.</p>
       </div>
       <div class="footer-right">
         <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top">

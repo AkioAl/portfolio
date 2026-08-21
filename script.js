@@ -6,31 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* ──────────────────────────────────────────────────────────
-     1. GENERATE HERO STAR FIELD
-     ────────────────────────────────────────────────────────── */
-  const heroStars = document.getElementById('hero-stars');
-  if (heroStars) {
-    const STAR_COUNT = 90;
-    const fragment = document.createDocumentFragment();
-    for (let i = 0; i < STAR_COUNT; i++) {
-      const star = document.createElement('div');
-      star.classList.add('star');
-      const size = Math.random() * 2.5 + 0.5;
-      star.style.cssText = `
-        left: ${(Math.random() * 100).toFixed(2)}%;
-        top:  ${(Math.random() * 100).toFixed(2)}%;
-        width:  ${size.toFixed(2)}px;
-        height: ${size.toFixed(2)}px;
-        --dur: ${(2 + Math.random() * 4).toFixed(2)}s;
-        --dly: ${(Math.random() * 5).toFixed(2)}s;
-      `;
-      fragment.appendChild(star);
-    }
-    heroStars.appendChild(fragment);
-  }
-
-  /* ──────────────────────────────────────────────────────────
-     2. GENERATE ORBIT STAR FIELD (inside project card)
+     1. GENERATE ORBIT STAR FIELD (inside ORBIT project card)
      ────────────────────────────────────────────────────────── */
   const orbitStars = document.getElementById('orbit-stars');
   if (orbitStars) {
